@@ -33,5 +33,10 @@ Contains the code for the model comparison and feature experiments
 - feature_experiments: experiments for the BIN and VOX features using XGBoost
 
 ### simpleview
-Contains the main files for the simpleview model
+Contains the main files for the simpleview model. Thanks to Gefei Kong for providing the code. Note that though these are implementations of "DetailView" I excluded their modification for my experiments so the model performs like SimpleView
+- cfgf_dfconvnextt...: config file for running the experiments. Here all parameters, species, resolution and features are selected.
+- dataset_titan_dv: creation of the dataset
+- detailview: model implementation. FEATURE BRANCH ADDED HERE
+- main_titan_f: main script
+- train_titan_f: training script
 
