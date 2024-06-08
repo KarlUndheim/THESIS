@@ -2,7 +2,7 @@
 Code used for master's thesis
 
 ## Acknowledgements
-First I want to thank Gefei Kong for her help and credit her work with the simpleview model, which was implemented by her.
+First I want to thank Gefei Kong @Alessiacosmos for her help during the thesis. I also want to credit her work with the simpleview model, which was implemented by her.
 Furthermore, ChatGPT has been used as a copilot throughout the coding, as stated in the thesis. Some key implementations not stated in the ai declarations are highlighted in the code.
 
 ## Overview
