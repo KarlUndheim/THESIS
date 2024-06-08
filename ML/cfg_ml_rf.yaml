@@ -1,0 +1,20 @@
+exp_name: "tspF_ml_rf"
+
+model:
+  modelname: "rf"
+
+data:
+  data_path: "../Training_Data_Ref_BINEXP/split_data/"
+  feat_filename: "features_h_intensity"
+  save_root: "./exp/"
+  scale_feats: True # whether normalize the features
+
+  # Here species can be merged into groups
+  mapping: {1: 0, 2: 1, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 2, 9: 2}
+  consider_species: [1,2,3,4,5,6,7,8,9] # rm 5,6,9
+  all_feats: False
+  use_feats: ['i_p90', 'i_sk', 'i_max', 'i_mean', 'i_min', 'i_kut', 'h'] # 'i_p90', 'i_sk', 'i_max', 'R_p90', 'D_1'
+  datasplit:
+    train: "mrg_train"
+    val: "mrg_val"
+
