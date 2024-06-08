@@ -7,7 +7,7 @@ Furthermore, ChatGPT has been used as a copilot throughout the coding, as stated
 
 ## Overview
 This repository shows the code used for the experiments in my thesis. The code is presented as-is for transparency and documentation purposes.
-It is not intended to be executable as the work was nonlinear and the dataset is not public. 
+It is not intended to be executable, as the work was nonlinear and the dataset is not public. 
 
 ## Code Documentation
 The code is largely uncommented due to its experimental nature. Instead this README provides brief descriptions of the individual scripts or folders to help understand their purpose and functionality without the need to delve into the code itself.
