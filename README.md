@@ -14,7 +14,7 @@ The code is largely uncommented due to its experimental nature. Instead this REA
 
 ## Repository structure
 ### preprocess
-Contains the code for feature extraction. Except for the BIN features in "mdl_featcalc.py" and the VOX features in "voxel_features.py" the features are just implementations of the benchmark features from Yu et al.
+Contains the code for feature extraction. Except for the BIN features in "mdl_featcalc.py" and the VOX features in "voxel_features.py" the features are just implementations of the benchmark features stated in the thesis.
 - mdl_featCalc.py: extraction of radiometric features
 - convexhullfeatures.py: extraction of CA, CV, CD, Hrange, Hmax, Hmean, Hstd
 - penetration_density.py: extraction of penetration and density features D_i
