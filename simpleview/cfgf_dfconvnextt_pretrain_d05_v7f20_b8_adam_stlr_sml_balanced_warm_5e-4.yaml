@@ -1,0 +1,40 @@
+exp_name: "tspF_dfm_convnext_tiny_dv"
+
+model:
+  pretrain:
+  batch_size: 4
+  shuffle_dataset: True
+  random_seed: 0
+  learning_rate: [0.0005, 10, 0.5] #[init, step_size, gamma] for scheduler
+  momentum: 0.9 #Only used for sgd, ignroed for adam
+  warm_up: "linear" # none, linear, exp, untuned_linear, untuned_exp
+  epochs: 400
+  loss_fn: "smooth-loss"  #smooth-loss-timm, cross-entropy, smooth-loss
+  optimizer: "adam"
+  train_sampler: "random" # balanced, random, balanced_T_<temperature>
+  model: "DetailView_DfModel" # DetailView_DfModel
+  dfmodel:
+    name: "convnext_tiny" # resnet18, resnet34, resnet50, resnext50_32x4d, convnext_tiny
+    pretrain_weight: True
+    dropout_ratio:
+  species_considered: ['1','2','3','4','5','6','7','8','9'] #
+  mapping: {0: 0, 1: 1, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 2}
+
+
+data:
+  data_path: "../../Training_Data_Ref_BINEXP/split_data/"
+  save_root: "./expf/"
+  num_views: 6 # only consider front-back view of the section view.
+  features: ['i_p90', 'i_sk', 'i_max', 'i_mean', 'i_min', 'i_kut', 'h_range', 'h_max'] # h:height, i: intensity<_max, _min, _mean, _sk, _kut, _p90>, if want to split channel, use <ch0, ch1, ch2> and 'ch' will be replaced by '_'
+  scale_feats: True
+  num_classes: 9
+  transform_prop: -1
+  datasplit:
+    train: "mrg_train"
+    val: "mrg_val"
+  depth_image:
+    iimg_size: 256 # the size of depth image when create it
+    oimg_size: 256 # the size of final output depth image
+# 'i_p90', 'i_sk', 'i_max', 'R_p90', 'D_1'
+
+
